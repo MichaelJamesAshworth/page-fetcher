@@ -16,15 +16,11 @@ const fetchAndSave = (url, localPath) => {
   });
 };
 
+//function to use for filesize
 function getFilesizeInBytes(filename) {
   const stats = fs.statSync(filename);
   const fileSizeInBytes = stats.size;
   return fileSizeInBytes;
-};
-//need to make an http request (use request)
+}
 
-//Use node's fs filsystem module to write the file fs.writeFile()
-
-//file size 1 char = 1 byte
-
-fetchAndSave(url, localPath)
+fetchAndSave(url, localPath);
